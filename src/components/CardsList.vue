@@ -23,6 +23,7 @@ export default {
         return {
             apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
             cardsList : [],
+            cardsFilter : [],
             store
         }
     },
@@ -34,11 +35,12 @@ export default {
         .then( (response) => {
             console.log(response.data.data);
             this.cardsList = response.data.data;
+            this.cardsFilter = response.data.data.archetype;
         })
         .catch(function (error) {
             console.log(error);
         })
-    }
+    },
 }
 </script>
 
