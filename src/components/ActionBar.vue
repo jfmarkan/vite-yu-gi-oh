@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <h3>ActionBar</h3>
+    <div class="container py-3">
+        <select name="type" id="type-select">
+            <option value="Alien">Alien</option>
+        </select>
     </div>
 </template>
 

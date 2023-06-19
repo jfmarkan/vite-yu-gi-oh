@@ -1,9 +1,12 @@
 <template>
-    <div>
-        <h2>Main</h2>
-    </div>
-    <ActionBar />
-    <CardsList />
+    <main>
+        <div class="background">
+            <div class="container">
+                <ActionBar />
+                <CardsList />
+            </div>
+        </div>
+    </main>
 </template>
 
 <script>
@@ -25,5 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-    
+    .background{
+        background-color: #d48f38;
+    }
 </style>

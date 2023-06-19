@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@bundled-es-modules/axios": "^0.27.2",
+    "@popperjs/core": "^2.11.8",
     "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
