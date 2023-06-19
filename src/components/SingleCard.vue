@@ -7,6 +7,11 @@
 <script>
 export default {
     name: 'SingleCard',
+    data(){
+        return {
+
+        }
+    },
 }
 </script>
 

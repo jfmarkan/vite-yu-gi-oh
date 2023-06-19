@@ -7,6 +7,11 @@
 <script>
 export default {
     name: 'ActionBar',
+    data(){
+        return {
+
+        }
+    },
 }
 </script>
 

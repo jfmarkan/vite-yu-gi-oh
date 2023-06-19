@@ -12,6 +12,11 @@ import ActionBar from './ActionBar.vue';
 
 export default {
     name: 'AppMain',
+    data(){
+        return {
+
+        }
+    },
     components:{
         CardsList,
         ActionBar
