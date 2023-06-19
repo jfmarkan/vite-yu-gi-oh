@@ -4,7 +4,7 @@
             <SingleCard v-for="card in cardsList"
                 :name="card.name"
                 :archetype="card.archetype"
-                :image="card.card_images[0]"
+                :image="card.card_images[0].image_url_small"
             />
         </div>
     </div>
