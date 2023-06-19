@@ -9,6 +9,7 @@
 import SingleCard from './SingleCard.vue';
 
 import axios from 'axios';
+import {store} from '../store'
 
 
 
