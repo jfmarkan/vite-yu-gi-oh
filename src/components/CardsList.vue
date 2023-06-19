@@ -1,15 +1,10 @@
 <template>
     <div class="container">
-        <div class="row"  v-if="store.isLoading">
-            <div class="col-12">
-                
-            </div>
-        </div>
-        <div class="row py-3 px-5 justify-content-evenly" v-else>
+        <div class="row py-3 px-5 justify-content-evenly">
             <SingleCard v-for="card in cardsList"
                 :name="card.name"
                 :archetype="card.archetype"
-                :image="card.card_images.image_url_small"
+                :image="card.card_images[0]"
             />
         </div>
     </div>
@@ -20,7 +15,6 @@ import SingleCard from './SingleCard.vue';
 
 import axios from 'axios';
 import {store} from '../store.js'
-
 
 
 export default {
@@ -38,8 +32,8 @@ export default {
     created(){
         axios.get(this.apiUrl)
         .then( (response) => {
-            console.log(response.data);
-            this.cardsList = response.data;
+            console.log(response.data.data);
+            this.cardsList = response.data.data;
         })
         .catch(function (error) {
             console.log(error);
