@@ -1,17 +1,22 @@
 <template>
     <div>
-        <p>Found "N" Cards</p>
+        <p>Found {{cardsList.length}} Cards</p>
     </div>
 </template>
 
 <script>
+import {store} from '../store.js'
+
     export default {
         name: 'ResultCounter',
         data(){
             return{
-                
+                store
             }
-        }
+        },
+        props:{
+            cardsList: Array,
+        },
     }
 </script>
 

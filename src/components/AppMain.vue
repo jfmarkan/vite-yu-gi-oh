@@ -3,7 +3,6 @@
         <div class="background">
             <div class="container">
                 <ActionBar />
-                
                 <CardsList :cardsList="cardsList"/>
             </div>
         </div>
