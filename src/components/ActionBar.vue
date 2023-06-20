@@ -1,7 +1,7 @@
 <template>
     <div class="container py-3">
-        <select name="type" id="type-select">
-            <option v-for="filter in filtersList" :value="filter.archetype_name" @click="$emit('filtered', value)">{{filter.archetype_name}}</option>
+        <select name="type" id="type-select" v-model="selected" @click="$emit('filtered', selected)">
+            <option v-for="filter in filtersList" :value="filter.archetype_name">{{filter.archetype_name}}</option>
         </select>
     </div>
 </template>

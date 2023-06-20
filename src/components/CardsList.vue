@@ -45,5 +45,6 @@ export default {
 <style lang="scss" scoped>
     .container{
         background-color: #FFF;
+        overflow-y: auto;
     }
 </style>
