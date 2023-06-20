@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <div class="row py-3 px-5 justify-content-evenly">
+            <ResultCounter />
             <SingleCard v-for="card in cardsList"
                 :name="card.name"
                 :archetype="card.archetype"
@@ -12,7 +13,7 @@
 
 <script>
 import SingleCard from './SingleCard.vue';
-
+import ResultCounter from './ResultCounter.vue';
 import axios from 'axios';
 import {store} from '../store.js'
 
@@ -23,12 +24,12 @@ export default {
         return {
             apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
             cardsList : [],
-            cardsFilter : [],
             store
         }
     },
     components :{
         SingleCard,
+        ResultCounter,
     },
     created(){
         axios.get(this.apiUrl)

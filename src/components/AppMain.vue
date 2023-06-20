@@ -3,6 +3,7 @@
         <div class="background">
             <div class="container">
                 <ActionBar />
+                
                 <CardsList />
             </div>
         </div>
@@ -13,6 +14,7 @@
 import CardsList from './CardsList.vue';
 import ActionBar from './ActionBar.vue';
 
+
 export default {
     name: 'AppMain',
     data(){
@@ -22,7 +24,8 @@ export default {
     },
     components:{
         CardsList,
-        ActionBar
+        ActionBar,
+
     }
 }
 </script>
