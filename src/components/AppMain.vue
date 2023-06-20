@@ -4,7 +4,7 @@
             <div class="container">
                 <ActionBar />
                 
-                <CardsList />
+                <CardsList :cardsList="cardsList"/>
             </div>
         </div>
     </main>
@@ -13,20 +13,34 @@
 <script>
 import CardsList from './CardsList.vue';
 import ActionBar from './ActionBar.vue';
+import axios from 'axios';
+import {store} from '../store.js'
 
 
 export default {
     name: 'AppMain',
     data(){
         return {
-
+            store,
+            cardsList:[],
+            apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
         }
     },
     components:{
         CardsList,
         ActionBar,
 
-    }
+    },
+    created(){
+        axios.get(this.apiUrl)
+        .then( (response) => {
+            console.log(response.data.data);
+            this.cardsList = response.data.data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+    },
 }
 </script>
 

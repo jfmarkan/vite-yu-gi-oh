@@ -22,26 +22,17 @@ export default {
     name: 'CardsList',
     data(){
         return {
-            apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
-            cardsList : [],
             store
         }
+    },
+    props:{
+        cardsList: Array,
     },
     components :{
         SingleCard,
         ResultCounter,
     },
-    created(){
-        axios.get(this.apiUrl)
-        .then( (response) => {
-            console.log(response.data.data);
-            this.cardsList = response.data.data;
-            this.cardsFilter = response.data.data.archetype;
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
-    },
+    
 }
 </script>
 
