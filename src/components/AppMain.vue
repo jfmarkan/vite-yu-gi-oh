@@ -23,7 +23,7 @@ export default {
         return {
             store,
             cardsList:[],
-            apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
+            apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php',
         }
     },
     components:{
@@ -36,6 +36,7 @@ export default {
         .then( (response) => {
             console.log(response.data.data);
             this.cardsList = response.data.data;
+            this.store.isLoading = false
         })
         .catch(function (error) {
             console.log(error);
